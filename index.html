@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements Luxury Apartment - Retouched Interior Showcase</title>
+    <meta name="description" content="Showcase Foto Interior Terang & HDR Elements Luxury Apartment. Swipe / Geser untuk menjelajahi seluruh ruangan.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Swiper CSS for Touch Swipe Gallery -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-accent">ELEMENTS</span> LUXURY
+            </div>
+            <nav class="nav-links">
+                <a href="#showcase" class="nav-item active">Swipe Gallery</a>
+                <a href="#grid" class="nav-item">Semua Ruangan</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="badge">✨ Retouched High Dynamic Range Interior</div>
+            <h1 class="hero-title">Elements Apartment<br><span class="gradient-text">Galeri Interior Bright & HDR</span></h1>
+            <p class="hero-desc">
+                Jelajahi 18 foto interior ruangan Elements Apartment dengan pencahayaan terang, natural, dan detail presisi. Usap / swipe ke kanan-kiri pada layar.
+            </p>
+            
+            <div class="hero-cta">
+                <a href="#showcase" class="btn-primary">
+                    <span>👈 Swipe / Geser Foto 👉</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section class="filter-section" id="showcase">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Semua Ruangan (18)</button>
+            <button class="filter-btn" data-filter="living">Living Room</button>
+            <button class="filter-btn" data-filter="bedroom">Bed Room</button>
+            <button class="filter-btn" data-filter="bathroom">Bath Room</button>
+            <button class="filter-btn" data-filter="kitchen">Kitchen & Dining</button>
+            <button class="filter-btn" data-filter="patio">Patio & Maid</button>
+        </div>
+    </section>
+
+    <!-- Full-Bleed Swipeable Swiper Gallery Section -->
+    <section class="swiper-section">
+        <div class="swiper main-swiper">
+            <div class="swiper-wrapper" id="swiperWrapper">
+                <!-- Dynamic cards populated via app.js -->
+            </div>
+            <!-- Pagination & Navigation -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- Full Room Grid Section -->
+    <section class="grid-section" id="grid">
+        <div class="section-header">
+            <h2>Koleksi Foto Terang Ruangan</h2>
+            <p>Klik pada foto untuk melihat ukuran penuh / fullscreen</p>
+        </div>
+        
+        <div class="room-grid" id="roomGrid">
+            <!-- Grid cards populated via app.js -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Elements Luxury Apartment Showcase.</p>
+    </footer>
+
+    <!-- Fullscreen Modal Viewer -->
+    <div class="modal" id="imageModal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img id="modalImg" class="modal-full-img" src="" alt="Full View">
+            <div class="modal-caption" id="modalCaption"></div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="app.js"></script>
+</body>
+</html>
